@@ -255,8 +255,8 @@ header.dark-theme .links:hover svg {
 body {
   font-family: "Archivo", sans-serif;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 body a {
   text-decoration: none;
@@ -270,7 +270,7 @@ img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px;
 }
 
@@ -598,10 +598,14 @@ main.nav-open .div1 {
   flex-direction: row;
   justify-content: space-between;
   gap: 25px;
+  min-width: 0;
 }
 .item-grid .item .wrapper2 {
   display: flex;
   flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .item-grid .item .wrapper2 h2 {
   margin-top: 0;
@@ -614,6 +618,7 @@ main.nav-open .div1 {
 .item-grid .item .id_icon {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   gap: 25px;
 }
 .item-grid .item .id_icon svg {
@@ -639,6 +644,17 @@ main.nav-open .div1 {
 @media only screen and (min-width: 768.1px) and (max-width: 1500px) {
   .item-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1500.1px) {
+  .item-grid .item {
+    container-name: item-card;
+    container-type: inline-size;
+  }
+  @container item-card (max-width: 200px) {
+    .item-grid .item .wrapper {
+      flex-direction: column;
+    }
   }
 }
 html,
@@ -692,8 +708,7 @@ body {
 
 img.hero1 {
   border-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #contacts {
@@ -913,4 +928,6 @@ img.hero1 {
   .item-grid .item .id_icon svg {
     width: 56px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

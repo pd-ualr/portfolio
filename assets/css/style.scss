@@ -251,6 +251,8 @@ header.dark-theme {
 /*===GENERAL STYLING===*/
 body {
   font-family: "Archivo", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   a {
     text-decoration: none;
@@ -264,6 +266,7 @@ body {
 img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -588,10 +591,14 @@ main.nav-open .div1 {
       flex-direction: row;
       justify-content: space-between;
       gap: 25px;
+      min-width: 0;
     }
     .wrapper2 {
       display: flex;
       flex-direction: column;
+      flex: 1 1 0;
+      min-width: 0;
+      overflow-wrap: anywhere;
       h2 {
         margin-top: 0;
         margin-bottom: 10px;
@@ -604,6 +611,7 @@ main.nav-open .div1 {
     .id_icon {
       display: flex;
       flex-direction: column;
+      flex-shrink: 0;
       gap: 25px;
       svg {
         width: 100px;
@@ -631,6 +639,17 @@ main.nav-open .div1 {
 @media only screen and (min-width: 768.1px) and (max-width: 1500px) {
   .item-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1500.1px) {
+  .item-grid .item {
+    container-name: item-card;
+    container-type: inline-size;
+  }
+  @container item-card (max-width: 200px) {
+    .item-grid .item .wrapper {
+      flex-direction: column;
+    }
   }
 }
 
