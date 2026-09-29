@@ -26,8 +26,8 @@ body.light-theme .controls ul li {
   color: #21181b;
 }
 body.light-theme .controls ul li.active {
-  background-color: #cd5f2a;
-  color: #faf5d8;
+  background-color: #e3ab83;
+  color: #21181b;
 }
 body.light-theme .controls ul li:hover {
   background-color: rgba(242, 171, 55, 0.15);

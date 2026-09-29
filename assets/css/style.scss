@@ -8,9 +8,11 @@ $darkaccent2: #4e7980;
 
 /*Light Mode*/
 $lightbg1: #faf5d8;
+$lightbg2: #fff;
 $lighttxt: #21181b;
 $lightaccent: #cd5f2a;
 $lightaccent2: #f2ab37;
+$lightaccent3: #e3ab83;
 
 /*===THEME TOGGLE===*/
 /*Default Backup*/
@@ -40,8 +42,8 @@ body.light-theme {
         color: $lighttxt;
       }
       li.active {
-        background-color: $lightaccent;
-        color: $lightbg1;
+        background-color: $lightaccent3;
+        color: $lighttxt;
       }
       li:hover {
         background-color: rgba($lightaccent2, 0.15);
