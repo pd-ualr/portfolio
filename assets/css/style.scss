@@ -262,6 +262,7 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 /*===MOBILE STYLING===*/
@@ -483,14 +484,20 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 25px;
   }
   .div1 {
     height: calc(100vh - 100px);
-    border-radius: 20px;
   }
 }
 #aboutme {
   margin-top: 9px;
+}
+header {
+  z-index: 10;
+}
+main.nav-open .div1 {
+  display: none;
 }
 /* Media Queries */
 .modal {
@@ -571,6 +578,7 @@ img {
     border-radius: 20px;
     padding: 25px;
     height: 100%;
+    min-width: 0;
     display: none;
     .wrapper {
       display: flex;
@@ -614,7 +622,7 @@ img {
 
 @media (max-width: 768px) {
   .item-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 @media only screen and (min-width: 768.1px) and (max-width: 1500px) {
@@ -642,7 +650,9 @@ body {
   border-radius: 50%;
   opacity: 0;
   transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 .cursor-dot {
@@ -728,6 +738,13 @@ img.hero1 {
     margin-right: 15px;
   }
 }
+.info1,
+.info2,
+.info3,
+.info4 {
+  display: flex;
+  align-items: center;
+}
 
 @media screen and (max-width: 1250px) {
   .links svg {
@@ -772,7 +789,7 @@ img.hero1 {
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
-      padding: 0 1em;
+      padding: 0 30px 0 15px;
       overflow: visible;
     }
 
@@ -864,5 +881,19 @@ img.hero1 {
 @media screen and (max-width: 600px) {
   #filters {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  #filters li:not(:first-child) {
+    margin: 0;
+  }
+  .item-grid .item {
+    padding: 16px;
+  }
+  .item-grid .item .wrapper {
+    gap: 12px;
+  }
+  .item-grid .item .id_icon svg {
+    width: 56px;
   }
 }
