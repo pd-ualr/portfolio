@@ -708,7 +708,8 @@ body {
 
 img.hero1 {
   border-radius: 20px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #contacts {
@@ -928,6 +929,4 @@ img.hero1 {
   .item-grid .item .id_icon svg {
     width: 56px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
