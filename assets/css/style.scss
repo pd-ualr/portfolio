@@ -59,12 +59,6 @@ body.light-theme {
       color: $lightaccent;
     }
   }
-  .cursor-dot-outline {
-    background-color: rgba($lightaccent2, 0.15);
-  }
-  .cursor-dot {
-    background-color: $lightaccent2;
-  }
   .hero1 {
     background-color: rgba($lightaccent2, 0.15);
   }
@@ -171,12 +165,6 @@ body.dark-theme {
     a {
       color: $darkaccent;
     }
-  }
-  .cursor-dot-outline {
-    background-color: rgba($darkaccent, 0.15);
-  }
-  .cursor-dot {
-    background-color: $darkaccent;
   }
   .hero1 {
     background-color: rgba($darkaccent2, 0.15);
@@ -651,42 +639,6 @@ main.nav-open .div1 {
       flex-direction: column;
     }
   }
-}
-
-//*cursor*//
-
-html,
-body {
-  &,
-  * {
-    cursor: none;
-  }
-}
-
-.cursor-dot,
-.cursor-dot-outline {
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition:
-    opacity 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
-}
-
-.cursor-dot {
-  $size: 20px;
-  width: $size;
-  height: $size;
-}
-
-.cursor-dot-outline {
-  $size: 40px;
-  width: $size;
-  height: $size;
 }
 
 body {

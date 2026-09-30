@@ -13,6 +13,7 @@ let currentTheme =
 
 // Apply the theme and update icon and text
 function applyTheme(theme) {
+  btn.setAttribute("aria-pressed", theme === "dark");
   document.body.classList.remove("light-theme", "dark-theme");
   header.classList.remove("light-theme", "dark-theme");
   document.body.classList.add(`${theme}-theme`);

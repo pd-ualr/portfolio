@@ -43,12 +43,6 @@ body.light-theme .item h2,
 body.light-theme .item a {
   color: #cd5f2a;
 }
-body.light-theme .cursor-dot-outline {
-  background-color: rgba(242, 171, 55, 0.15);
-}
-body.light-theme .cursor-dot {
-  background-color: #f2ab37;
-}
 body.light-theme .hero1 {
   background-color: rgba(242, 171, 55, 0.15);
 }
@@ -168,12 +162,6 @@ body.dark-theme .modal a,
 body.dark-theme .item h2,
 body.dark-theme .item a {
   color: #68b4a4;
-}
-body.dark-theme .cursor-dot-outline {
-  background-color: rgba(104, 180, 164, 0.15);
-}
-body.dark-theme .cursor-dot {
-  background-color: #68b4a4;
 }
 body.dark-theme .hero1 {
   background-color: rgba(78, 121, 128, 0.15);
@@ -657,35 +645,6 @@ main.nav-open .div1 {
     }
   }
 }
-html,
-html *,
-body,
-body * {
-  cursor: none;
-}
-
-.cursor-dot,
-.cursor-dot-outline {
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.cursor-dot {
-  width: 20px;
-  height: 20px;
-}
-
-.cursor-dot-outline {
-  width: 40px;
-  height: 40px;
-}
-
 body {
   overflow-x: hidden;
 }

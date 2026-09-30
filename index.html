@@ -42,10 +42,12 @@
       <div class="inner-wrap">
         <div class="brand">
           <div class="brand2">
-            <a href="index.html" aria-label="Peter Deano">
+            <a href="index.html" aria-label="Peter Deano, home">
               <svg
                 id="logo-icon"
                 class="logo"
+                aria-hidden="true"
+                focusable="false"
                 width="270"
                 height="111"
                 viewBox="0 0 270 111"
@@ -105,9 +107,15 @@
             through inclusive design.
           </p>
         </div>
-        <nav>
+        <nav id="primary-navigation" aria-label="Primary navigation">
           <div class="links">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="size-5"
+            >
               <path
                 fill-rule="evenodd"
                 d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z"
@@ -118,7 +126,13 @@
             <a href="#top">Home</a>
           </div>
           <div class="links">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="size-5"
+            >
               <path
                 d="m9.653 16.915-.005-.003-.019-.01a20.759 20.759 0 0 1-1.162-.682 22.045 22.045 0 0 1-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 0 1 8-2.828A4.5 4.5 0 0 1 18 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 0 1-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 0 1-.69.001l-.002-.001Z"
               />
@@ -127,7 +141,13 @@
             <a href="#projects">Projects</a>
           </div>
           <div class="links">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="size-5"
+            >
               <path
                 fill-rule="evenodd"
                 d="M6 3.75A2.75 2.75 0 0 1 8.75 1h2.5A2.75 2.75 0 0 1 14 3.75v.443c.572.055 1.14.122 1.706.2C17.053 4.582 18 5.75 18 7.07v3.469c0 1.126-.694 2.191-1.83 2.54-1.952.599-4.024.921-6.17.921s-4.219-.322-6.17-.921C2.694 12.73 2 11.665 2 10.539V7.07c0-1.321.947-2.489 2.294-2.676A41.047 41.047 0 0 1 6 4.193V3.75Zm6.5 0v.325a41.622 41.622 0 0 0-5 0V3.75c0-.69.56-1.25 1.25-1.25h2.5c.69 0 1.25.56 1.25 1.25ZM10 10a1 1 0 0 0-1 1v.01a1 1 0 0 0 1 1h.01a1 1 0 0 0 1-1V11a1 1 0 0 0-1-1H10Z"
@@ -140,7 +160,13 @@
             <a href="#resume">Resume</a>
           </div>
           <div class="links">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="size-5"
+            >
               <path
                 d="M3 4a2 2 0 0 0-2 2v1.161l8.441 4.221a1.25 1.25 0 0 0 1.118 0L19 7.162V6a2 2 0 0 0-2-2H3Z"
               />
@@ -151,7 +177,14 @@
             <a href="#contacts">Contacts</a>
           </div>
         </nav>
-        <div class="menu-toggle">
+        <div
+          class="menu-toggle"
+          role="button"
+          tabindex="0"
+          aria-label="Toggle navigation"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
           <svg
             class="menu-open"
             aria-hidden="true"
@@ -187,10 +220,16 @@
           </svg>
         </div>
         <div id="nav_bottom">
-          <button class="btn-toggle">
+          <button
+            class="btn-toggle"
+            type="button"
+            aria-label="Toggle color theme"
+          >
             <!-- Default icon (sun) will be set dynamically based on the theme -->
             <svg
               id="theme-icon"
+              aria-hidden="true"
+              focusable="false"
               viewBox="0 0 20 20"
               fill="currentColor"
               class="size-5"
@@ -205,24 +244,71 @@
       </div>
     </header>
     <main id="top">
-      <section id="homepage">
+      <section id="homepage" aria-label="Introduction">
         <img
           class="div1"
           src="assets/img/Front.png"
           alt="Tilted collage of website design mockups made by Peter Deano."
         />
       </section>
-      <section class="section2" id="projects">
-        <h1>PROJECTS</h1>
-        <section class="filter-section">
+      <section
+        class="section2"
+        id="projects"
+        aria-labelledby="projects-heading"
+      >
+        <h1 id="projects-heading">PROJECTS</h1>
+        <section
+          class="filter-section"
+          aria-label="Project filters and results"
+        >
           <!--contols-->
           <section class="controls">
-            <ul id="filters" class="clearfix">
-              <li class="filter active" data-filter="all">All</li>
-              <li class="filter" data-filter=".frontend">Frontend</li>
-              <li class="filter" data-filter=".backend">Backend</li>
-              <li class="filter" data-filter=".design">Design</li>
-              <li class="filter" data-filter=".softskills">Soft Skills</li>
+            <ul id="filters" class="clearfix" aria-label="Filter projects">
+              <li
+                class="filter active"
+                data-filter="all"
+                role="button"
+                tabindex="0"
+                aria-pressed="true"
+              >
+                All
+              </li>
+              <li
+                class="filter"
+                data-filter=".frontend"
+                role="button"
+                tabindex="0"
+                aria-pressed="false"
+              >
+                Frontend
+              </li>
+              <li
+                class="filter"
+                data-filter=".backend"
+                role="button"
+                tabindex="0"
+                aria-pressed="false"
+              >
+                Backend
+              </li>
+              <li
+                class="filter"
+                data-filter=".design"
+                role="button"
+                tabindex="0"
+                aria-pressed="false"
+              >
+                Design
+              </li>
+              <li
+                class="filter"
+                data-filter=".softskills"
+                role="button"
+                tabindex="0"
+                aria-pressed="false"
+              >
+                Soft Skills
+              </li>
             </ul>
           </section>
           <!--articles-->
@@ -641,8 +727,8 @@
           </section>
         </section>
       </section>
-      <section class="section2" id="resume">
-        <h1>RESUME</h1>
+      <section class="section2" id="resume" aria-labelledby="resume-heading">
+        <h1 id="resume-heading">RESUME</h1>
         <div id="resume-inner">
           <div class="resume1">
             <div>
@@ -761,8 +847,12 @@
           </div>
         </div>
       </section>
-      <section class="section2" id="contacts">
-        <h1>CONTACTS</h1>
+      <section
+        class="section2"
+        id="contacts"
+        aria-labelledby="contacts-heading"
+      >
+        <h1 id="contacts-heading">CONTACTS</h1>
         <div class="contactinfo">
           <div class="info1">
             <a href="mailto:pdeano@ualr.edu">
@@ -838,17 +928,14 @@
           <img
             class="info6"
             src="assets/img/footer_photo.JPEG"
-            alt="A personal image of Peter Deano surrounded by flowers."
+            alt="Peter Deano surrounded by flowers and tree branches beside a white fence."
           />
         </div>
       </section>
     </main>
-    <div class="cursor-dot-outline"></div>
-    <div class="cursor-dot"></div>
     <script src="assets/js/darkmode.js"></script>
     <script type="text/javascript" src="assets/js/menu-toggle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="assets/js/mouse.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
     <script src="assets/js/filter.js"></script>
